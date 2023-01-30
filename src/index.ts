@@ -1,6 +1,7 @@
 import { makeSprite, t, GameProps } from "@replay/core";
 import { WebInputs, RenderCanvasOptions } from "@replay/web";
 import { iOSInputs } from "@replay/swift";
+import { TextInput } from '@replay/text-input';
 
 export const options: RenderCanvasOptions = {
   dimensions: "scale-up",
@@ -84,6 +85,14 @@ export const Game = makeSprite<GameProps, GameState, WebInputs | iOSInputs>({
       ];
     }
     return [
+      TextInput({
+        fontName: 'monospace',
+        fontSize: 12,
+        id: 'test',
+        onChangeText: console.error,
+        text: 'test',
+        width: 100,
+      }),
       t.text({
         color: "red",
         text: "Hello Replay! To get started, edit src/index.ts",

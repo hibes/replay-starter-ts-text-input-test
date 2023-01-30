@@ -21,6 +21,7 @@
   "dependencies": {
     "@replay/core": "0.11.0",
     "@replay/swift": "0.11.0",
+    "@replay/text-input": "^0.11.0",
     "@replay/web": "0.11.0"
   },
   "devDependencies": {
