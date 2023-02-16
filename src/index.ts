@@ -1,11 +1,12 @@
 import { makeSprite, t, GameProps } from "@replay/core";
 import { WebInputs, RenderCanvasOptions } from "@replay/web";
 import { iOSInputs } from "@replay/swift";
-import { TextInput } from '@replay/text-input';
+import { TextInput, TextInputWeb } from '@replay/text-input';
 
 export const options: RenderCanvasOptions = {
   dimensions: "scale-up",
-};
+  nativeSpriteMap: {TextInput: TextInputWeb},
+} as any;
 
 export const gameProps: GameProps = {
   id: "Game",
